@@ -1,0 +1,181 @@
+
+Lecture Series: "Bayesian statistics, Data Mining and Machine Learning” 
+
+Lecture series composed of two “mini courses” in May '23, and Dec ’23 to Jan ’24.
+Aim 
+For whom
+Where 
+Modality 
+Prerequisites 
+
+
+Visit 1 (Apr 15 - July 15, 2023)
+
+Mini-course 1: “Practical introduction to Bayesian statistics” 
+6 lectures: May 4, 8, 11, 15, 22, 29, 2023 
+
+What about exploratory data analysis? E.g. Hess diagrams, 4-D coloring, etc?
+/Users/ivezic/Work/Classes/GitHub/DataSciencePublicRepos/SOSTAT2021-1/ZInotebooks/ZIlecture1.ipynb
+
+
+Topics: 
+a) Introduction to Maximum Likelihood method
+         - parameter estimation for normal distribution
+         - parameter estimation for Cauchy (Lorentz) distribution
+         - beating sqrt(N) improvement for uniform distribution 
+         - straight line fit with errors on both axes (does it need MCMC?)
+         - polynomial fit: which order to take? (too early? model selection) 
+         - penalized likelihood regression 
+         - Gaussian Process regression (reconsider...) 
+         - over-fitting, under-fitting and cross-validation 
+
+b) Introduction to Bayesian statistics
+         - basic concepts, priors, credible regions
+         - simple examples of parameter estimation 
+         - simple examples of model selection (poly with BIC) 
+         - hierarchical Bayes: see 
+               https://github.com/astroML/astroML-workshop_AAS235/blob/master/hierarchical_bayes/AAS2019_HBexample.ipynb
+         - perhaps ABC? see
+               https://github.com/astroML/astroML-workshop_AAS235/blob/master/approximate_bayesian_computation/AAS2019_ABCexample.ipynb
+
+c) MCMC and its applications in Bayesian statistics
+         - non-linear function regression
+         - model selection (examples: polynomials (again?), burst shapes in time series)
+
+Definitely watch this before teaching Bayes
+https://www.youtube.com/playlist?list=PLKW2Azk23ZtQSHmwOpObPEr58Pe1rpIdB
+
+
+Visit 2 (Dec 1 ’23 - Feb 28, 2024)
+
+Mini-course 2: “Introduction to Data Mining and Machine Learning”
+6 lectures: 3 in December 2023, and 3 in January 2024
+
+Topics:    
+a) Density estimation and clustering
+         - non-parametric vs. parametric estimation 
+         - Knuth histograms
+         - Bayesian Blocks algorithm  
+         - K-means clustering 
+         - Gaussian Mixtures model
+b) Unsupervised and supervised classification
+         - generative vs. discriminative classification
+         - evaluating success: ROC curves 
+         - K-Nearest Neighbor Classifier
+         - decision trees
+         - neural networks 
+c) Dimensionality reduction 
+         - the curse of dimensionality
+         - Principal Component Analysis
+         - Non-negative Matrix Factorization
+         - manifold learning 
+d) Deep Learning (Convolutional Neural Networks) 
+         - introduction to neural networks
+         - using CNNs to classify images 
+
+LOOK AT: /Users/ivezic/Work/Classes/GitHub/DataSciencePublicRepos/SOSTAT2021-1/ZInotebooks/ZIlecture2.ipynbXS
+
+For second part, also see:
+[1. Density Estimation](https://github.com/carmensg/IAA_School2019/tree/master/lectures/Day3-ZeljkoIvezic/notebooks/density_estimation.ipynb)
+[2. Clustering](https://github.com/carmensg/IAA_School2019/tree/master/lectures/Day3-ZeljkoIvezic/notebooks/clustering.ipynb)
+[3. Classification](https://github.com/carmensg/IAA_School2019/tree/master/lectures/Day3-ZeljkoIvezic/notebooks/classification.ipynb)
+[4. Dimensionality Reduction](https://github.com/carmensg/IAA_School2019/tree/master/lectures/Day3-ZeljkoIvezic/notebooks/dimensionality_reduction.ipynb)
+
+
+
+Misc and Aux:  
+  *** this is the latest and greatest version! ***
+SaoPaulo2021 lectures for Visit 1 (Lectures 11-13) and Visit 2 (Lectures 15-
+/Users/ivezic/Work/Classes/GitHub/DataScience/SaoPaulo2021/notebooks or
+https://github.com/ivezic/SaoPaulo2021
+
+Lecture11: Introduction to Statistics and MLE method  - possibly longer than 1 hour 
+  Motivation and Goals
+  IPython (jupyter) notebooks
+  Basics about statistics 
+  Distributions and Random samples
+  Robust statistics 
+  Maximum likelihood method
+      a) introduction: what likelihood is and what it is good for
+      b) simple examples of MLE: one-dimensional gaussian
+      c) MLE in action: fitting a parametrized model with heteroscedastic gaussian errors on y axis
+      d) cost functions and penalized likelihood
+      e) non-gaussian likelihood: binomial distribution (coin flip problem)
+      f) conceptual difficulties with the MLE (example: "waiting for a bus" problem)
+      g) what if we cannot write down the likelihood function?
+      
+Lecture12: Introduction to Bayesian Inference - could be easily 2 hours 
+  Bayes Rule extended to Bayesian Inference
+  The role of priors in Bayesian Inference
+  Simple parameter estimation examples
+      ** model comparison, BIC and poly example (no MCMC!) in Activity7, also Problem 2 in Activity8 (AIC too) 
+      ** model comparison for 2D GMMs, with BIC, in Activity 8
+      
+Lecture13: Introduction to Regression - 1 hour if MCMC intro very short 
+  Ordinary least square method
+  Total least square method
+  Linear Basis Function Regression
+  Non-linear Regression with MCMC  - good intro to MCMC, pymc3 example (asteroid age-color) 
+
+Lecture 14: Time Series Analysis - very astronomy specific, except for Digital Filtering 
+  Fourier Analysis
+  Discrete Fourier Transform
+  An example: estimating period for variable stars
+  Digital Filtering
+  Bonus topic: Analysis of Stochastic Processes
+
+Lecture 15: Density Estimation
+Lecture 16: Dimensionality Reduction
+Lecture 17: Clustering (Unsupervised Classification)
+Lecture 18: (Supervised) Classification
+Lecture 20: Classification of Astronomical Images with Deep Learning
+
+plus 4 activities… 
+
+Activity6:    for Lectures 11 and 12
+  Problem 1: robust statistics for Cauchy distribution
+  Problem 2: optimal bin width for constant-bin-width histograms
+  Problem 3: posterior probability for binomial distribution
+  Extra Activity: Bayesian Blocks Algorithm (leave for mini-course #2) 
+
+Activity7:    for Lectures 13 and 14  (problems 1 and 3 for IRB) 
+  Problem 1: fit polynomials of up to the 5th order to the provided dataset.
+                          Use BIC to find the best model for this dataset.
+  Problem 2: apply Bayesian Blocks Algorithm to period distribution (logP) of LINEAR variable stars.
+                    Plot histograms on both linear and log scale.
+		    Compare the result to classical (Knuth's) uniform bin width histogram
+  Problem 3: the flux vs. time plot further below shows UV flux measurements for an active M dwarf star.
+                    These stars are known for their exponential bursts of energy, well described by the profile...
+                    That is, Bayesian model selection.
+
+Activity8:   for Lectures 15 and 16 (except for GMMs and BIC) 
+  Problem 1: use Kernel Density Estimation in CMD Hess diagrams
+  Problem 2: a simulated dataset with 4 Gaussian components,  observational errors, using GMM fits
+                             with the number of components estimated with the BIC criterion.
+  Problem 3: PCA applied to 4-D data for variable stars from the SDSS and LINEAR surveys:
+
+Activity9:  for Lectures 17 and 18
+  Problem 1: clustering of orbital data for asteroids
+  Problem 2: supervised classification of periodic variable stars in 4-D 
+  Extra: RR Lyrae color-based classification using 6 methods and comparison with ROC curves 
+
+
+
+
+WATCH THESE 4 LECTURES FROM ASTRO HACK WEEK (10 hours!):
+https://www.youtube.com/playlist?list=PLKW2Azk23ZtQSHmwOpObPEr58Pe1rpIdB
+
+- some good plots for MCMC here: https://github.com/VanderbiltAstronomy/astr_8070_s21
+
+IAA_School2019 lectures for Visit 2:
+For Day 3, you need to install [astroML](https://www.astroml.org)
+To test your installation, please download and run this 
+[testing notebook](https://github.com/carmensg/IAA_School2019/blob/master/lectures/Day3-ZeljkoIvezic/notebooks/astroMLtesting.ipynb) 
+The easiest way to clone these notebooks, and supporting files in subdirectory "figures", is 
+to clone the entire IAA_School2019 repository (e.g. >git clone git@github.com:carmensg/IAA_School2019.git)
+
+[1. Density Estimation](https://github.com/carmensg/IAA_School2019/tree/master/lectures/Day3-ZeljkoIvezic/notebooks/density_estimation.ipynb)
+[2. Clustering](https://github.com/carmensg/IAA_School2019/tree/master/lectures/Day3-ZeljkoIvezic/notebooks/clustering.ipynb)
+[3. Classification](https://github.com/carmensg/IAA_School2019/tree/master/lectures/Day3-ZeljkoIvezic/notebooks/classification.ipynb)
+[4. Dimensionality Reduction](https://github.com/carmensg/IAA_School2019/tree/master/lectures/Day3-ZeljkoIvezic/notebooks/dimensionality_reduction.ipynb)
+
